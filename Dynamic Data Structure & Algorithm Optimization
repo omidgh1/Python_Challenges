@@ -1,0 +1,52 @@
+Problem: Dynamic Data Structure & Algorithm Optimization
+You are tasked with creating a Data Management System for a logistics company. The system must perform the following tasks efficiently:
+
+Dynamic Data Structure
+Create a data structure that can:
+
+Add a new package (package_id, weight, destination) dynamically.
+Delete a package by package_id.
+Retrieve the heaviest package going to a specific destination.
+Algorithmic Task
+Implement an algorithm to optimize the distribution of packages onto trucks:
+
+Each truck has a maximum weight capacity (truck_capacity).
+The goal is to minimize the number of trucks needed to transport all packages.
+A truck can carry multiple packages as long as their combined weight does not exceed the truck_capacity.
+Bonus Task (Optional)
+Add functionality to track the average weight of all packages in the system, updating dynamically as packages are added or removed.
+
+Requirements
+Your solution must handle up to 10,000 packages efficiently.
+Use Python standard libraries only.
+You must write a main function to test the following:
+Add 5 packages.
+Retrieve the heaviest package for a specific destination.
+Optimize package distribution for a truck with a capacity of 50.
+Example Input and Output
+python
+Copy code
+# Adding packages
+add_package(1, 10, 'New York')
+add_package(2, 15, 'Los Angeles')
+add_package(3, 25, 'New York')
+add_package(4, 35, 'Chicago')
+add_package(5, 45, 'New York')
+
+# Retrieve heaviest package for 'New York'
+retrieve_heaviest_package('New York')  # Output: (5, 45)
+
+# Optimize truck distribution for capacity = 50
+optimize_truck_distribution(50)  
+# Output: 3 (minimum number of trucks required)
+
+# Average weight of packages
+get_average_weight()  # Output: 26.0
+Constraints
+Use appropriate data structures to ensure O(log n) or better performance for adding, deleting, and retrieving packages.
+Assume the weights are positive integers and package_id is unique.
+Evaluation Criteria
+Correctness: Does the code produce the correct results for all cases?
+Efficiency: Does the code handle edge cases and scale to the upper limits efficiently?
+Readability: Is the code well-documented and easy to understand?
+Optional Bonus: Dynamic tracking of average weight.
